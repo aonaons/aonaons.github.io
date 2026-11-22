@@ -16,6 +16,41 @@
             font-family: 'Fira Sans', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .parallax-section {
+            min-height: 60vh;
+            padding: 48px 0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #about.parallax-section {
+            background-image: linear-gradient(rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9)), url("images/aon7.jpg");
+        }
+
+        #experience.parallax-section {
+            background-image: linear-gradient(rgba(224, 224, 224, 0.9), rgba(224, 224, 224, 0.9)), url("images/aon6.jpg");
+        }
+
+        #skills.parallax-section {
+            background-image: linear-gradient(rgba(208, 208, 208, 0.9), rgba(208, 208, 208, 0.9)), url("images/aon5.jpg");
+        }
+
+        @media (max-width: 768px), (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+
         .card {
             width: 300px;
             border: 1px solid #ccc;
@@ -88,8 +123,8 @@
         </a>
     </div>
     <!-- section that link with three cards above, when clieck card scroll to that section without javascript, using id-->
-    <div id="about"
-        style="height: 500px; background-color: #f0f0f0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div id="about" class="parallax-section"
+        style="height: auto; background-color: #f0f0f0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <h2>About Me</h2>
         <div
             style="display: flex; align-items: center; justify-content: center; margin-top: 20px; width: 80%; gap: 20px;">
@@ -109,42 +144,55 @@
 
         </div>
     </div>
-    <div id="experience"
-        style="height: 500px; background-color: #e0e0e0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div id="experience" class="parallax-section"
+        style="height: auto; background-color: #e0e0e0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <h2>Experience Section</h2>
         <div
             style="display: flex; align-items: center; justify-content: center; margin-top: 20px; width: 80%; gap: 20px;">
 
-            <p style="flex: 1;">
-                ประจำหลักสูตรเทคโนโลยีสารสนเทศ ผู้เชี่ยวชาญด้านระบบสารสนเทศและการประยุกต์ใช้ดิจิทัลเทคโนโลยี
-                จบการศึกษาระดับปริญญาตรีวิทยาการคอมพิวเตอร์และปริญญาโทเทคโนโลยีสารสนเทศจากมหาวิทยาลัยศิลปากร
-                มีความโดดเด่นในการเชื่อมโยงนวัตกรรม AI, ประประยุกต์ใช้เทคโนโลยีสารสนเทศ
-                เข้ากับบริบทชุมชนและภาคธุรกิจจริง
-                พร้อมทั้งถ่ายทอดองค์ความรู้ในฐานะวิทยากรระดับมืออาชีพอย่างเรียบง่าย ทันสมัย
-                และนำไปต่อยอดให้เกิดประโยชน์ได้จริง
-            </p>
-            <img src="images/aon7.jpg" alt="Card Image"
+            <div style="flex: 1;">
+                <h1> IT Lecturer & Speaker</h1>
+                <p>อาจารย์สาขาเทคโนโลยีสารสเทศ และวิทยากรผู้เชี่ยวชาญด้าน Artificial Intelligence
+                    เพื่อการประยุกต์ใช้ในธุรกิจจริง มีประสบการณ์ถ่ายทอดความรู้เชิงลึกให้เข้าใจง่าย
+                    พร้อมเชื่อมโยงเทคโนโลยี AI เข้ากับกลยุทธ์องค์กร เชี่ยวชาญการบรรยายหัวข้อ Generative AI, Data-Driven
+                    Decision Making และ Business Automation มุ่งเน้นการจัด Workshop
+                    เชิงปฏิบัติการที่ผู้เข้าอบรมสามารถนำเครื่องมือและเทคนิคไปใช้งานได้ทันที
+                    ช่วยองค์กรและบุคลากรเพิ่มผลผลิต (Productivity) ปรับปรุงกระบวนการทำงาน
+                    และยกระดับขีดความสามารถการแข่งขัน พร้อมให้คำปรึกษาและผลักดันการทำ AI Transformation
+                    ให้ตอบโจทย์เป้าหมายทางธุรกิจอย่างคุ้มค่าและยั่งยืน
+                </p>
+                <h1> Entrepreneur</h1>
+                <p> ผู้ประกอบการร้านคำอ้อน ประยุกต์ใช้ Generative AI สำหรับธุรกิจ SME และอาหารประยุกต์"
+                    ดำเนินธุรกิจและบริหารแบรนด์ คำอ้อน ขนมไทย (สาขา ICONSIAM และ Central Ayutthaya) โดยนำเทคโนโลยี AI
+                    มาใช้จริงครบวงจร ทั้งการสร้างสรรค์ภาพสินค้า การเล่าเรื่องแบรนด์ (Storytelling)
+                    การเขียนสคริปต์การตลาด ไปจนถึงการวางแผนกลยุทธ์ธุรกิจ เพื่อถ่ายทอดประสบการณ์ตรงจาก
+                    "ผู้ประกอบการจริงสู่การใช้งาน AI ที่เกิดผลลัพธ์ทางธุรกิจได้จริง"</p>
+            </div>
+            <img src="images/aon6.jpg" alt="Card Image"
                 style="width: 300px; height: auto; margin-right: 20px; flex: 1;">
         </div>
     </div>
-    <div id="skills"
-        style="height: 500px; background-color: #d0d0d0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div id="skills" class="parallax-section"
+        style="height: auto; background-color: #d0d0d0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <h2>Skills Section</h2>
         <div
             style="display: flex; align-items: center; justify-content: center; margin-top: 20px; width: 80%; gap: 20px;">
 
-            <img src="images/aon7.jpg" alt="Card Image"
+            <img src="images/aon5.jpg" alt="Card Image"
                 style="width: 300px; height: auto; margin-right: 20px; flex: 1;">
 
 
-            <p style="flex: 1;">
-                ประจำหลักสูตรเทคโนโลยีสารสนเทศ ผู้เชี่ยวชาญด้านระบบสารสนเทศและการประยุกต์ใช้ดิจิทัลเทคโนโลยี
-                จบการศึกษาระดับปริญญาตรีวิทยาการคอมพิวเตอร์และปริญญาโทเทคโนโลยีสารสนเทศจากมหาวิทยาลัยศิลปากร
-                มีความโดดเด่นในการเชื่อมโยงนวัตกรรม AI, ประประยุกต์ใช้เทคโนโลยีสารสนเทศ
-                เข้ากับบริบทชุมชนและภาคธุรกิจจริง
-                พร้อมทั้งถ่ายทอดองค์ความรู้ในฐานะวิทยากรระดับมืออาชีพอย่างเรียบง่าย ทันสมัย
-                และนำไปต่อยอดให้เกิดประโยชน์ได้จริง
-            </p>
+            <div style="flex: 1; font-size: 16px; color: #333;">
+                <ul>
+                    <li>ด้านคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</li>
+                    <li>ระบบสารสนเทศและการพัฒนาแอปพลิเคชัน</li>
+                    <li>การประยุกต์ใช้ AI ในงานปฏิบัติการและการสอน</li>
+                    <li>การตลาดอิเล็กทรอนิกส์และดิจิทัลคอมเมิร์ซ</li>
+                    <li>การพัฒนาและต่อยอดผลิตภัณฑ์ชุมชน</li>
+                    <li>การต่อยอดมรดกทางวัฒนธรรมสู่เชิงพาณิชย์</li>
+                    <li>ระบบสารสนเทศเพื่อการจัดการ</li>
+                </ul>
+            </div>
 
         </div>
     </div>
@@ -154,4 +202,5 @@
 <footer style="background-color: #f8f8f8; padding: 20px; text-align: center;">
     <p>&copy; 2026 Miss.Suwan Ajkonghan. All rights reserved.</p>
 </footer>
+
 </html>
